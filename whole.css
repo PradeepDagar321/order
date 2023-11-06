@@ -1,0 +1,150 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: "Urbanist", sans-serif;
+}
+
+:root{
+    --bs-dark-color: #1a1d20;
+    --bs-dark-primary:#1c1c1c;
+    --bs-main-color:#fff;
+    --bs-primary-color:#c6c6c6;
+    --secondary-color: #29a9fd;
+    --bs-supporting-color: #C850C0;
+}
+
+h1, h2,h3,h4,h5{
+    font-family: 'Lexend Deca', sans-serif;
+    color: var( --bs-dark-color);
+}
+
+h1{
+    font-size: 3.8rem;
+}
+
+h2{
+    line-height: 3rem;
+    font-weight: 600;
+    font-size: 3.4rem;
+}
+p{
+    margin: 0;
+    font-weight: 400;
+    font-size: 1rem;
+    color: var( --bs-dark-color);
+    letter-spacing: 0.07rem;
+    line-height: 1.55rem;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+}
+.nav-link{
+    color:var(--bs-primary-color);
+    font-weight: bold;
+}
+.nav-link:hover{
+    color:var(--secondary-color);
+}
+a{
+    text-decoration: none;
+}
+.hero-section .container{
+    display:grid;
+    place-content: center;
+    height: inherit;
+}
+.bg-main{
+    height:80vh;
+    position: relative;
+}
+.hero-video--section{
+    max-width: 100%;
+    height:auto;
+    width:30rem;
+    border-radius: 2rem;
+}
+.bg-color{
+    background-color:var(--bs-dark-primary);
+}
+.bg-theme{
+    color:var(--bs-supporting-color);
+    background-image:none;
+}
+.text-light-grey{
+    color:var(--bs-primary-color);
+}
+.custom-shape-divider-bottom-1698726132 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1698726132 svg {
+    position: relative;
+    display: block;
+    width: calc(133% + 1.3px);
+    height: 150px;
+}
+
+.custom-shape-divider-bottom-1698726132 .shape-fill {
+    fill: #FFFFFF;
+}
+.services-section{
+    padding:6rem 0 3rem 0;
+}
+.card-box:hover{
+    box-shadow: rgba(16, 16, 17, 0.2)10px 24px 24px;
+    border:2px solid black;
+}
+.more-info-section{
+
+    background-image: linear-gradient(rgba(22,22,22,0.9), rgba(22,22,22,0.9)), url("https://images.pexels.com/photos/316093/pexels-photo-316093.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding: 6rem 0;
+    overflow: hidden;
+    height:900px;
+}
+.more-info-section .img-section{
+    position: relative;
+}
+
+.more-info-section img{
+    position: absolute;
+    top: 0%;
+    left: 0;
+    max-width: 100%;
+    width: 90%;
+    /*transform: scaleX(-1);*/
+}
+#one{
+    margin-top:10%;
+}
+#two{
+    margin-top:0%;
+}
+
+    .txt{
+        margin-left:70%;
+        height:80px;
+        width:200px;
+        border-radius: 40%;
+        
+    }
+
+.business-section{
+    padding-top:5rem;
+}
+.common-section{
+    padding:0 0 9rem 0;
+}
+#con{
+    font-size: 40px;
+}

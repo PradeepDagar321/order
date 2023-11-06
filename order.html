@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        body{
+            background-color:rgb(228, 203, 170)
+           
+        }
+        section{
+            border: 3px solid rgb(21, 19, 19);
+            display:inline-block;
+            padding:90px 20px 30px 30px;
+            text-align:center;
+            border-radius: 20px;
+            box-shadow:5px 5px 15px 5px black ;
+            align-self: center;
+            margin-top:3%;
+            margin-left:30%;
+            background-color:rgb(228, 203, 170);
+            height:550px;
+            font-weight: 100;
+            width: 600px;
+        }
+        #sh{
+            margin-top: 30px;
+            border: 3px solid black;
+            border-radius: 50px;
+            height:50px;
+            width:100px;
+            margin-left: 0%;
+        }
+        #pass{
+            border: 3px solid black;
+            border-radius: 20px;
+            margin-top: 10px;
+            padding-left: 20px;
+            height:40px;
+        }
+        #name{
+            border: 3px solid black;
+            border-radius: 20px;
+            margin-top: 10px;
+            padding-left: 20px;
+            height:30px;
+            width:300px;
+        }
+        #number{
+            border: 3px solid black;
+            border-radius: 20px;
+            margin-top: 10px;
+            padding-left: 20px;
+            height:30px;
+            width:300px;
+        }
+        h1{
+            text-align: center;
+            font-size: 60px;
+            color:rgb(28, 27, 25)
+        }
+        label{
+            margin:10px;
+            font-size: large;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+        }
+        button:hover{
+            cursor:pointer;
+            background-color: rgb(222, 169, 70);
+        }
+        
+        #con{
+            display:flex;
+            flex-direction: column;
+            margin-left:20%;
+            letter-spacing: 5px;
+            
+        }
+        .all{
+            font-size: 30px;
+        }
+        #icon{
+            font-size: 30px;
+        }
+        #main{
+            display: flex;
+            background-color: rgb(228, 203, 170);
+        }
+        #hori{
+            writing-mode: vertical-rl;
+            text-orientation: upright;
+            font-size:90px;
+        }
+        #one{
+            width:10px;
+        }
+        .me{
+            margin-left:100%;
+        }
+        #col{
+            display:flex;
+            margin-left:20%;
+        }
+        .city{
+            border: 3px solid black;
+            border-radius: 20px;
+            margin-top: 10px;
+            padding-left: 20px;
+            height:30px;
+            width:100px;
+        }
+        #sta{
+            margin-left: 17%;
+        }
+    </style>
+    <script >
+      function  cal()
+        {
+            let msg="Your Order has been placed you will be notified soon!";
+           
+            return  alert(msg);
+
+        }
+        
+        function shreya()
+        {
+            let msg ="Make sure you have already signed up";
+            alert(msg);
+        }
+        shreya();
+        
+        // function sachin(name)
+        // {
+        //    let msg = "hey!"+" "+name+" "+"how are you";
+        //    alert(msg);
+        // }
+        // var name = prompt("name?");
+        // sachin(name);
+
+         
+
+    </script>
+</head>
+<body>
+    <h1>Enter the details</h1>
+    <form action="./6.html">
+    <div id="main">   
+        <div id="one">
+            <h1 id="hori">CITY</h1>
+        </div>
+    <section>
+      
+        <lable class="all">Contact Details</lable>
+        <i class="ri-phone-line" id="icon"></i>
+        <div id="con">
+                <input type="text"id="name" placeholder="name">
+                <input type="text"id="number" placeholder="number">
+    </div>
+    </br>
+    <lable class="all">Address</lable>
+    <i class="ri-map-pin-2-line" id="icon"></i>
+    <div id="con">
+        <input type="text"id="name" placeholder="House No./Building No.">
+        <input type="text"id="number" placeholder="Road Name/Area/Colony">
+
+</div>
+    <div id="col">
+        <input type="text"class="city" placeholder="Street number">
+        <input type="text"class="city" id="sta" placeholder="Block">
+    </div>
+   </br>
+   <lable class="all">Product Detail</lable>
+   <i class="ri-product-hunt-line" id="icon"></i>
+   <div id="con">
+       <input type="text"id="name" placeholder="Products">
+       <input type="text"id="number" placeholder="Product-details with quantity">
+
+</div>
+    <button onclick="return cal()" type="submit" id="sh" >ORDER</button>
+    </section>
+    <div>
+        <h1 id="hori" class="me">AGENCY</h1>
+    </div>
+    </div>
+</body>
+</html>

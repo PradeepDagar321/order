@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+            text-transform: capitalize;
+            transition:all .2s cubic-bezier(.34,1.12,.68,1.31);
+        }
+        body {
+            justify-content: center;
+            align-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-size: cover;
+           background-color: black;
+        }
+        .box {
+            display: flex;
+            position: relative;
+            width: 200px;
+            height: 300px;
+            transform-style: preserve-3d;
+            animation: animate 10s linear infinite;
+            margin-left: 50%;
+        }
+        @keyframes animate {
+            0% {
+                transform: perspective(1000px) rotateY(0deg);
+            }
+            100% {
+                transform: perspective(1000px) rotateY(360deg);
+            }
+        }
+        .box span {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transform-origin: center;
+            transform-style: preserve-3d;
+            transform: rotateY(calc(var(--i) * 25deg)) translate(400px);
+            -webkit-box-reflect: below 0px linear-gradient(transparent, transparent, #0004);
+        }
+        .box span img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        h1 {
+            margin-left: 35%;
+            font-size: 100px;
+            color: beige;
+        }
+        #id {
+            height: 500px;
+            width: 700px;
+            background-color: aliceblue;
+            border: 10px solid black;
+        }
+        #h {
+            font-size: 40px;
+            color: azure;
+            cursor: pointer; /* Add cursor style to indicate it's clickable */
+        }
+
+        .gallery{
+            color:antiquewhite;
+            margin-top:500px;
+           
+            min-height: 100vh;
+            padding-bottom: 100px;
+        }
+        .gallery .controls{
+            display:flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding:20px 0;
+            list-style:none ;
+        }
+        .gallery .controls .buttons{
+            height:40px;
+            width:140px;
+            background:#fff;
+            color:#666;
+            font-size: 20px;
+            line-height: 20px;
+            cursor:pointer;
+            margin:20px;
+            box-shadow: 0 3px 5px #fff;
+            text-align: center;
+            border-radius: 45%;
+            
+        }
+        .gallery .controls .buttons.active{
+            background:rgb(142, 122, 70);
+            color:#fff
+        }
+        .gallery .image-container{
+            display:flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .gallery .image-container .image{
+            height:400px;
+            width:350px;
+            overflow:hidden;
+            border:15px solid black;
+            margin:20px;
+            box-shadow: 0 3px 5px rgba(0,0,0,.3);
+            border-radius: 40px;
+            box-shadow: 0 3px 5px #fff;
+        }
+        .gallery .image-container .image img{
+            height:100%;
+            width:100%;
+            object-fit: cover;
+        }
+        .gallery .image-container .image:hover img{
+            transform: scale(1.0);
+        }
+        h1{
+           color:rgb(194, 175, 123);
+        }
+    </style>
+</head>
+<body>
+    <h1>New Product</h1>
+    <div class="box">
+        <span style="--i:1;"><img src="https://domsindia.com/wp-content/uploads/2022/07/ARTISTIC-BRUSH-ZIP-CASE-01-300x300.png"></span>
+    </div>
+
+    <div class="gallery" >
+        <h1>Products</h1>
+        <ul class="controls">
+            <li class="buttons active" data-filter="all">all</li>
+            <li class="buttons" data-filter="brushes">brushes</li>
+            <li class="buttons" data-filter="crayons">crayons</li>
+            <li class="buttons" data-filter="full-set">full-set</li>
+            <li class="buttons" data-filter="gliter">gliter/clay</li>
+            <li class="buttons" data-filter="notebooks">notebooks</li>
+            <li class="buttons" data-filter="pencils">pencils</li>
+        </ul>
+         
+        <div class="image-container">
+            
+            <a href="https://domsindia.com/wp-content/uploads/2022/07/ARTISTIC-BRUSH-ZIP-CASE-01-300x300.png" class="image brushes">
+                  <img src="https://domsindia.com/wp-content/uploads/2022/07/ARTISTIC-BRUSH-ZIP-CASE-01-300x300.png">
+            </a>
+            <a href="https://domsindia.com/wp-content/uploads/2022/12/PETLON-1-300x300.jpg" class="image brushes">
+                <img src="https://domsindia.com/wp-content/uploads/2022/12/PETLON-1-300x300.jpg">
+          </a>
+          <a href="https://domsindia.com/wp-content/uploads/2022/12/CANDY-ARTIST-WITH-BRUSH-300x300.jpg" class="image brushes">
+            <img src="https://domsindia.com/wp-content/uploads/2022/12/CANDY-ARTIST-WITH-BRUSH-300x300.jpg">
+           </a>
+      <a href="https://domsindia.com/wp-content/uploads/2022/08/DOMS-Grippie-Crayons-300x300.jpg" class="image crayons">
+        <img src="https://domsindia.com/wp-content/uploads/2022/08/DOMS-Grippie-Crayons-300x300.jpg">
+         </a>
+  <a href="https://domsindia.com/wp-content/uploads/2022/08/DOMS-Colour-Pencil-Flat-Tin-Pack-12-Shades-1-300x300.jpg" class="image crayons">
+    <img src="https://domsindia.com/wp-content/uploads/2022/08/DOMS-Colour-Pencil-Flat-Tin-Pack-12-Shades-1-300x300.jpg">
+      </a>
+      <a href="https://domsindia.com/wp-content/uploads/2022/08/DOMS-Poster-Colour-12-Shades-1-300x300.jpg" class="image crayons">
+        <img src="https://domsindia.com/wp-content/uploads/2022/08/DOMS-Poster-Colour-12-Shades-1-300x300.jpg">
+          </a>
+          <a href="https://domsindia.com/wp-content/uploads/2022/08/DOMS-Aqua-Water-Colour-Pen-24-Shades-300x300.jpg" class="image crayons">
+            <img src="https://domsindia.com/wp-content/uploads/2022/08/DOMS-Aqua-Water-Colour-Pen-24-Shades-300x300.jpg">
+              </a>
+              <a href="https://domsindia.com/wp-content/uploads/2022/07/DOMS-Glamore-Kit-300x300.jpg" class="image full-set">
+                <img src="https://domsindia.com/wp-content/uploads/2022/07/DOMS-Glamore-Kit-300x300.jpg">
+                  </a>   
+                  <a href="https://domsindia.com/wp-content/uploads/2022/12/SMART-KIT-NEW-1-300x300.jpg" class="image full-set">
+                    <img src="https://domsindia.com/wp-content/uploads/2022/12/SMART-KIT-NEW-1-300x300.jpg">
+                      </a>   
+                      <a href="https://domsindia.com/wp-content/uploads/2022/07/DOMS-Glitter-Colour-10-ml-300x300.jpg" class="image gliter">
+                        <img src="https://domsindia.com/wp-content/uploads/2022/07/DOMS-Glitter-Colour-10-ml-300x300.jpg">
+                          </a>
+                          <a href="https://domsindia.com/wp-content/uploads/2022/07/MODELLING-CLAY-24-SHADES-300x300.jpg" class="image gliter">
+                            <img src="https://domsindia.com/wp-content/uploads/2022/07/MODELLING-CLAY-24-SHADES-300x300.jpg">
+                              </a>  
+                              <a href="https://domsindia.com/wp-content/uploads/2022/12/DOUGH-CLAY-8-1-300x300.jpg" class="image gliter">
+                                <img src="https://domsindia.com/wp-content/uploads/2022/12/DOUGH-CLAY-8-1-300x300.jpg">
+                                  </a>  
+                                  <a href="https://domsindia.com/wp-content/uploads/2022/10/Conference-Pad-300x300.png" class="image notebooks">
+                                    <img src="https://domsindia.com/wp-content/uploads/2022/10/Conference-Pad-300x300.png">
+                                      </a>  
+                                      <a href="https://domsindia.com/wp-content/uploads/2022/11/Martial-art-Series-A4-Soft-cover-Notebook-Series-29.7-x-21-1-300x300.png" class="image notebooks">
+                                        <img src="https://domsindia.com/wp-content/uploads/2022/11/Martial-art-Series-A4-Soft-cover-Notebook-Series-29.7-x-21-1-300x300.png">
+                                          </a>  
+                                          <a href="https://domsindia.com/wp-content/uploads/2022/09/DOMS-Karbon-Eraser-Tipped-Pencil-Blister-300x300.jpg" class="image pencils">
+                                            <img src="https://domsindia.com/wp-content/uploads/2022/09/DOMS-Karbon-Eraser-Tipped-Pencil-Blister-300x300.jpg">
+                                              </a> 
+                                              <a href="https://domsindia.com/wp-content/uploads/2022/09/NEON-JAR-30PCS-NEWWW-300x300.jpg" class="image pencils">
+                                                <img src="https://domsindia.com/wp-content/uploads/2022/09/NEON-JAR-30PCS-NEWWW-300x300.jpg">
+                                                  </a> 
+                                                  <a href="https://domsindia.com/wp-content/uploads/2022/09/DOMS-Superio-Pencils-Display-0-1-300x300.jpg" class="image pencils">
+                                                    <img src="https://domsindia.com/wp-content/uploads/2022/09/DOMS-Superio-Pencils-Display-0-1-300x300.jpg">
+                                                      </a> 
+                                                      <a href="https://domsindia.com/wp-content/uploads/2022/09/DOMS-Groove-Graphite-Pencil-50-Pcs-Jar-300x300.jpg" class="image pencils">
+                                                        <img src="https://domsindia.com/wp-content/uploads/2022/09/DOMS-Groove-Graphite-Pencil-50-Pcs-Jar-300x300.jpg">
+                                                          </a> 
+                                                          <a href="https://domsindia.com/wp-content/uploads/2022/09/DOMS-Zoom-Pencil-30-Pcs-Jar-1-300x300.jpg" class="image pencils">
+                                                            <img src="https://domsindia.com/wp-content/uploads/2022/09/DOMS-Zoom-Pencil-30-Pcs-Jar-1-300x300.jpg">
+                                                              </a>   
+                                                           
+                                             
+        </div>
+    </div>
+
+  
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+        <script>
+           $(document).ready(function(){
+
+$('.buttons').click(function(){
+
+    $(this).addClass('active').siblings().removeClass('active');
+
+    var filter = $(this).attr('data-filter')
+
+    if(filter == 'all'){
+        $('.image').show(400);
+    }else{
+        $('.image').not('.'+filter).hide(200);
+        $('.image').filter('.'+filter).show(400);
+    }
+
+});
+
+$('.gallery').magnificPopup({
+
+    delegate:'a',
+    type:'image',
+    gallery:{
+        enabled:true
+    }
+
+});
+
+});
+        </script>
+   
+</body>
+</html>
